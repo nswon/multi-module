@@ -1,0 +1,21 @@
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+  jpa:
+    database: mysql
+    database-platform=org: hibernate.dialect.MySQL8Dialect
+    properties:
+      hibernate:
+        format_sql: true
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+
+  datasource:
+    url: jdbc:mysql://localhost:3310/multimodule?serverTimezone=UTC&characterEncoding=UTF-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root
